@@ -94,7 +94,7 @@ var xiala = document.querySelector(".xiala");
 var rfimg = reface.childNodes;
 var checkname = document.querySelector(".checkname");
 var username = document.querySelector("#username");
-var nowname = document.querySelector(".name");
+var nowname = document.querySelector(".nowname");
 
 document.addEventListener('click', function (event) {
     var clickedElement = event.target;
@@ -162,21 +162,13 @@ for (let i = 0; i < rfimg.length; i++) {
     rfimg[i].addEventListener("mouseout", () => {
         recolor2(rfimg[i]);
     })
-    let j = (i + 1) / 2;
-    rfimg[i].addEventListener("click", () => {
-        f1.style.backgroundImage = "url('../src/img/f" + j + ".jpg')";
-    })
+    
 }
 
 navbox.addEventListener("click", () => {
     xiala.style.display = "block";
 })
 
-var newname = "kk";
-checkname.addEventListener("click", () => {
-    newname = username.value;
-    nowname.textContent = newname;
-})
 
 function getElementToPageTop(el) {
     if (el.parentElement) {
@@ -184,15 +176,3 @@ function getElementToPageTop(el) {
     }
     return el.offsetTop
 }
-window.addEventListener('scroll', function () {
-    var grade = document.querySelector('.grade');
-    if (window.pageYOffset > getElementToPageTop(grade)) {
-        grade.style.position = 'fixed';
-        grade.style.top = '0';
-        grade.style.right = '17%';
-    } else {
-        grade.style.position = 'absolute';
-        grade.style.top = 'none';
-        grade.style.right = '-43%';
-    }
-});

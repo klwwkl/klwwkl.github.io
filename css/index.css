@@ -5,7 +5,7 @@ body {
 
 html {
     font-size: 16px;
-    /* background-color: #f6f6f6; */
+    scroll-behavior: smooth;
 }
 
 .bg {
@@ -25,6 +25,8 @@ html {
     list-style: none;
     text-decoration: none;
     user-select: none;
+    outline: none;
+    font-family: "STXingkai", "华文行楷", "微软雅黑", sans-serif;
 }
 
 .navbar {
@@ -60,7 +62,7 @@ html {
     align-items: center;
     padding: 0 10%;
     height: 50px;
-     width: 100%;
+    width: 100%;
 }
 
 .nav-box {
@@ -72,31 +74,40 @@ html {
 }
 
 .logo {
-    font-family: STXinWei;
     font-weight: bold;
     font-size: 1.25rem;
     color: #03dcdc;
 }
 
-.f1{
+.f1 {
     background-image: url("../src/img/f1.jpg");
 }
-.newface-1{
+
+.f2 {
     background-image: url("../src/img/f1.jpg");
 }
-.newface-2{
+
+.newface-1 {
+    background-image: url("../src/img/f1.jpg");
+}
+
+.newface-2 {
     background-image: url("../src/img/f2.jpg");
 }
-.newface-3{
+
+.newface-3 {
     background-image: url("../src/img/f3.jpg");
 }
-.newface-4{
+
+.newface-4 {
     background-image: url("../src/img/f4.jpg");
 }
-.newface-5{
+
+.newface-5 {
     background-image: url("../src/img/f5.jpg");
 }
-.newface-6{
+
+.newface-6 {
     background-image: url("../src/img/f6.jpg");
 }
 
@@ -109,7 +120,7 @@ html {
     z-index: 1;
 }
 
-.name{
+.name {
     margin-left: 10px;
 }
 
@@ -120,7 +131,14 @@ html {
     background-size: cover;
 }
 
-.reface{
+.memface {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.reface {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -132,14 +150,16 @@ html {
     align-items: center;
     flex-wrap: wrap;
 }
-.f-blk{
+
+.f-blk {
     display: flex;
     width: 50px;
     height: 50px;
     justify-content: center;
     align-items: center;
 }
-.rename{
+
+.rename {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -149,13 +169,13 @@ html {
     z-index: 1;
 }
 
-#username{
+#username {
     width: 140px;
     height: 40px;
     line-height: 40px;
 }
 
-.checkname{
+.checkname {
     width: 140px;
     height: 40px;
     line-height: 40px;
@@ -277,20 +297,200 @@ html {
     opacity: 0.5;
 }
 
-.grade{
-    position: absolute;
-    width: 290px;
+.grade {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top:0;
+    width: 300px;
     height: 320px;
+    margin-left: 30px;
     background-color: #fff;
-    right: -43%;
+    box-shadow: 0px 0px 3px 1px #eee;
+}
+
+.poem-title {
+    font-size: 1.2rem;
+}
+
+.poem {
+    font-size: 1rem;
 }
 
 .updates {
+    display: flex;
     position: relative;
-    margin: 0 19.8% 20px 0;
-    width: 700px;
-    height: 1200px;
+    margin: 0 0 20px 0;
+    width: 1000px;
+    opacity: 0.8;
+}
+
+.Moment {
+    display: flex;
+    flex-direction: column;
+}
+
+.nowMoment {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     background-color: #fff;
     box-shadow: 0px 0px 3px 1px #eee;
+}
+
+.memMoment {
+    margin-top: 20px;
+}
+
+.nowtitle {
+    font-size: 1rem;
+    color: #03dcdc;
+}
+
+.now-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.nowname {
+    margin-left: 10px;
+}
+
+.nowname-2 {
+    margin-left: 10px;
+}
+
+#newmoment {
+    width: 640px;
+    height: 120px;
+    margin: 10px 0 10px 0;
+    border: 5px inset #eee solid;
+    border-radius: 5px;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    resize: none;
+}
+
+.upmoment {
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #eee;
+    color: #ff657f;
+    cursor: pointer;
+}
+
+.memtitle {
+    font-size: 1rem;
+    color: #03dc4b;
+    margin: 0 0 10px 0;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    padding-left: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 3px 1px #eee;
+}
+
+.mem {
+    position: relative;
+    word-wrap: break-word;
+    box-shadow: 0px 0px 3px 1px #eee;
+    background-color: #fff;
+    margin-top: 15px;
+    padding: 20px 0 0 20px;
+}
+
+.memname {
+    margin-left: 10px;
+}
+
+.mem-content {
+    margin-top: 10px;
+}
+
+.mood {
+    cursor: pointer;
+    color: #969696;
+    width: 10px;
+    margin-top: 10px;
+}
+
+.moodnum {
+    color: #969696;
+    font-size: 0.8rem;
+}
+
+.x {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.mem {
+    box-shadow: 0px 0px 3px 1px #eee;
+}
+
+.total{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 6rem;
+    height: 8rem;
+    background-color: #fff;
+    top:50%;
+    left: -5.3rem;
     opacity: 0.8;
+}
+
+.total:hover{
+    transition: .2s;
+    left:0.5rem;
+    box-shadow: 0px 0px 3px 2px #748bff;
+}
+
+.total>span{
+    color: red;
+}
+.backtop{
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.backtop:hover{
+    color: #74efff;
+}
+
+.navbar:hover,
+.nowMoment:hover,
+.cover:hover,
+.memtitle:hover,
+.grade:hover,
+.mem:hover {
+    box-shadow: 0px 0px 3px 2px #748bff;
+}
+
+.upmoment:hover,
+.upmoment:focus {
+    background-color: #74efff;
+    box-shadow: 1 1 3px #74efff;
+    border-radius: 5px;
+}
+
+/*按钮点击时效果*/
+.upmoment:active {
+    outline: 0;
+    box-shadow: 0 1px 4px #182bff80 inset;
 }
